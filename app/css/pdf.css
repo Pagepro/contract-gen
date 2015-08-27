@@ -1,0 +1,141 @@
+body {
+    font-size: 0.75em;
+}
+
+.logo-pagepro {
+	float: left;
+	width: 109px;
+	height: 45px;
+	margin-bottom: 40px;
+	background: url(../images/pagepro.png) 50% 50% no-repeat;
+	background-size: 109px 45px;
+}
+
+.place-and-data {
+	float: right;
+}
+
+h1 {
+	display: block;
+	clear: both;
+	text-align: center;
+}
+
+h3 {
+	font-size: 12px;
+}
+
+.typ-umowy {
+	float: right;
+	font-size: 20px;
+}
+
+ul {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.first-list {
+	padding: 20px 0 0;
+	margin-bottom: 40px;
+}
+
+.first-list li {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.first-list li span {
+	clear: left;
+	float: left;
+	width: 20%;
+	font-weight: bold;
+	text-align: left;
+}
+
+.second-list {
+	margin-bottom: 40px;
+}
+
+.second-list li {
+	margin-bottom: 10px;
+}
+
+.second-list li span {
+	display: block;
+	width: 50%;
+	float: left;
+}
+
+.second-list li strong {
+	font-weight: bold;
+}
+
+.third-list li span {
+	float: left;
+	width: 25%;
+}
+
+.footer-contract {
+	display: block;
+	padding-top: 60px;
+}
+
+.footer-contract span {
+	display: block;
+	clear: both;
+}
+
+.data-rachunku {
+	display: block;
+	float: none;
+	clear: both;
+	font-weight: bold;
+}
+
+.data-rachunku-data {
+	float: right;
+}
+
+.data-umowy {
+	display: block;
+	clear: both;
+	font-weight: bold;
+}
+
+.amount-in-words {
+	font-weight: bold;
+	padding-bottom: 25px;
+}
+
+.amount-in-words strong {
+	float: left;
+	width: 10%;
+}
+
+.amount-in-words span {
+	width: 90%;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+
+.signature {
+	clear: both;
+	padding: 40px 0;
+	overflow: hidden;
+}
+
+.signature span {
+	float: left;
+}
+
+.signature span:first-child {
+	margin-right: 100px;
+}
+
+.data-umowy-data {
+	float: right;
+}

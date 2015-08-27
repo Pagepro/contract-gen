@@ -1,0 +1,14 @@
+{
+  "podatek": 0.18,
+  "wystawca": {
+    "firma": "ANDŻEJ",
+    "imie": "ANDŻEJ",
+    "nazwisko": "ANDŻEJ",
+    "ulica": "ANDŻEJ 4/75",
+    "kodPocztowy": "00-001",
+    "miejscowosc": "ANDŻEJ",
+    "nip": "0000000001",
+    "pesel": "PESEL",
+    "regon": "000000000"
+  }
+}

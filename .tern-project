@@ -1,0 +1,13 @@
+{
+  "libs": [
+    "ecma5"
+  ],
+  "loadEagerly": [
+    "lib/*"
+  ],
+  "plugins": {
+    "node": {
+    
+    }
+  }
+}

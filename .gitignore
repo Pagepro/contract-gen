@@ -1,0 +1,5 @@
+node_modules
+rendered/*
+csv/*
+!csv/!!_example.csv
+config.json
