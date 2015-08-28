@@ -7,7 +7,6 @@ const csv = require('csv');
 const markdownpdf = require('markdown-pdf');
 
 const stringUtils = require('./app/util/string-utils.js');
-const remarkableClassy = require('remarkable-classy');
 const config = require('./config.json');
 
 const MARKDOWN_PDF_OPTIONS = {
@@ -21,7 +20,7 @@ const MARKDOWN_PDF_OPTIONS = {
     breaks: true, // Convert '\n' in paragraphs into <br>
     langPrefix: 'language-', // CSS language prefix for fenced blocks
     linkify: true, // Autoconvert URL-like text to links
-    plugins: [remarkableClassy]
+    plugins: []
   }
 };
 

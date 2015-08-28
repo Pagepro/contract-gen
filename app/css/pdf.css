@@ -90,19 +90,16 @@ ul {
 
 .data-rachunku {
 	display: block;
-	float: none;
 	clear: both;
 	font-weight: bold;
-}
-
-.data-rachunku-data {
-	float: right;
+  float: right;
 }
 
 .data-umowy {
 	display: block;
 	clear: both;
 	font-weight: bold;
+  float: right;
 }
 
 .amount-in-words {
@@ -134,8 +131,4 @@ ul {
 
 .signature span:first-child {
 	margin-right: 100px;
-}
-
-.data-umowy-data {
-	float: right;
 }

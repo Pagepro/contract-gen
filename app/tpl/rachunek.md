@@ -1,14 +1,14 @@
-**Rachunek z dnia**      <span class="data-rachunku-data"><%= dataRachunku %></span> {data-rachunku}
+**Rachunek z dnia**      <span class="data-rachunku"><%= dataRachunku %></span>
 
-za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy-data"><%= dataUmowy %><span> {data-umowy}
+za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmowy %><span>
 
 <ul class="first-list">
   <li><span>Wystawił/a:</span></dt>
-  <%= wystawca.imie %> <%= wystawca.nazwisko %></li>
+  <%= imie %> <%= nazwisko %></li>
   <li><span>Adres:</span>
-  <%= wystawca.ulicaINumer %>, <%= wystawca.kodPocztowy %> <%= wystawca.miejscowosc %></li>
-  <li><span>NIP:</span>
-  <%= wystawca.nip %> PESEL:  <%= wystawca.pesel %></li>
+  <%= ulicaINumer %>, <%= kodPocztowy %> <%= miejscowosc %></li>
+  <li><span>NIP:</span><%= nip %></li> 
+  <li><span>PESEL:</span><%= pesel %></li>
 </ul>
 
 <ul class="second-list">

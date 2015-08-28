@@ -3,3 +3,4 @@ rendered/*
 csv/*
 !csv/!!_example.csv
 config.json
+.DS_Store
