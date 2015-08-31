@@ -16,7 +16,7 @@ const dfd = q.defer();
 
 const MARKDOWN_PDF_OPTIONS = {
   // phantomPath: './node_modules/phantomjs2/bin/phantomjs',
-  cssPath: './css/pdf.css',
+  cssPath: './app/css/pdf.css',
   paperFormat: 'a4',
   paperOrientation: 'portrait',
   remarkable: {
