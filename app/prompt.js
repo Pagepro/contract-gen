@@ -83,7 +83,7 @@ function startPrompt() {
         } else {
           console.log('Writing config to config.json.');
           try {
-            fs.writeFileSync(path.join(__dirname, '..', '/config.json'), JSON.stringify(obj));
+            fs.writeFileSync(path.join(__dirname, '..', '/config.json'), JSON.stringify(obj, null, 4));
             dfd.resolve();
             console.log('File config.json successfully created at root directory.');
           } catch (e) {

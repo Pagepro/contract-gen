@@ -12,7 +12,7 @@ const stringUtils = require('./util/string-utils.js');
 const config = require('../config.json');
 
 const q = require('q');
-const dfd = q.defer();
+let dfd = q.defer();
 
 const MARKDOWN_PDF_OPTIONS = {
   // phantomPath: './node_modules/phantomjs2/bin/phantomjs',

@@ -7,9 +7,18 @@ za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmow
   <%= imie %> <%= nazwisko %></li>
   <li><span>Adres:</span>
   <%= ulicaINumer %>, <%= kodPocztowy %> <%= miejscowosc %></li>
-  <li><span>NIP:</span><%= nip %></li> 
-  <li><span>PESEL:</span><%= pesel %></li>
+  <% if (obj.nip) { %><li><span>NIP:</span><%= nip %></li> <% } %>
+  <% if (obj.pesel) { %><li><span>PESEL:</span><%= pesel %></li><% } %>
 </ul>
+
+<ul class="first-list">
+  <li><span>Dla:</span></dt>
+  <span>Adres:</span>
+  <%= wystawca.imie %> <%= wystawca.nazwisko %></li>
+  <li><%= wystawca.ulicaINumer %>, <%= wystawca.kodPocztowy %> <%= wystawca.miejscowosc %></li>
+  <li><span>NIP:</span><%= wystawca.nip %></li> 
+</ul>
+
 
 <ul class="second-list">
 	<li><span>kwota brutto:</span>
