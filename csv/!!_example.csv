@@ -1,5 +1,5 @@
 data umowy;data rachunku;przedmiot;kwota brutto;kwota brutto slownie;kwota netto;kwota netto słownie;imię;nazwisko;data urodzenia;pesel;nip;kod pocztowy;miejscowosc;ulica i numer;numer konta;
-01.08.2015;10.08.2015;Przygotowanie modułu XYZ;20 567,00;dwadzieścia tysięcy pięćset sześćdziesiąt siedem złotych;19 150,00;dziewiętnaście tysięcy sto pięćdziesiąt złotych;Andżej;Nazwisko;01.01.1990;98745632674;4567890453;20-508;Mrągowo;Kwadratowa 22/7;54 1468 9009 0000 3606 4578 3457;
+01.08.2015;10.08.2015;Przygotowanie modułu XYZ;4 000,00;cztery tysiące złotych;3 640,00;trzy tysiące sześćset czterdzieści;Andżej;Nazwisko;01.01.1990;98745632674;4567890453;20-508;Mrągowo;Kwadratowa 22/7;54 1468 9009 0000 3606 4578 3457;
 ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;

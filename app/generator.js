@@ -87,7 +87,7 @@ var templateHelpers = {
   },
   naleznyPodatek: function(kwotaBrutto) {
     var dochod = templateHelpers.dochod(kwotaBrutto);
-    return dochod;
+    return dochod.times(0.18).round();
   },
   doWyplaty: function(kwotaBrutto) {
     var decimal = templateHelpers.getDecimal(kwotaBrutto);

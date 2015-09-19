@@ -14,7 +14,7 @@ za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmow
 <ul class="first-list">
   <li><span>Dla:</span></dt>
   <span>Adres:</span>
-  <%= wystawca.imie %> <%= wystawca.nazwisko %></li>
+  <%= wystawca.firma %> <%= wystawca.imie %> <%= wystawca.nazwisko %></li>
   <li><%= wystawca.ulica %>, <%= wystawca.kodPocztowy %> <%= wystawca.miejscowosc %></li>
   <li><span>NIP:</span><%= wystawca.nip %></li> 
 </ul>
