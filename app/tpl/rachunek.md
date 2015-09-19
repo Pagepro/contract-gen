@@ -34,7 +34,7 @@ za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmow
 		<%= naleznyPodatek(kwotaBrutto).toString().replace('.', ',') %> zł
 	</li>
 	<li><span><strong>do wypłaty:</strong></span>
-		<strong><%= doWyplaty(kwotaBrutto).toString().replace('.', ',') %> zł</strong>
+		<strong><%= kwotaNetto %> zł</strong>
 	</li>
 </ul>         
           

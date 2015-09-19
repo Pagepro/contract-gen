@@ -34,7 +34,7 @@ const CSV_PATH = '../csv';
 const RENDERED_PATH = '../rendered';
 
 function removeGitIgnore(item) {
-  return item !== '.gitignore';
+  return (item !== '.gitignore' && item !== '.DS_Store');
 }
 
 const templates = _.filter(fs.readdirSync(path.join(__dirname, TPL_PATH)), removeGitIgnore);
