@@ -10,8 +10,8 @@
 ## Zamawiający: 
 nazwa:  <%= wystawca.firma %> <%= wystawca.imie %> <%= wystawca.nazwisko %> 
 adres: <%= wystawca.kodPocztowy %> <%= wystawca.miejscowosc %>, <%= wystawca.ulica %>
-NIP <%= wystawca.nip %> 
-REGON <%= wystawca.regon %> 
+NIP: <%= wystawca.nip %> 
+REGON: <%= wystawca.regon %> 
 
 
 ## Twórca: 

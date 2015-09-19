@@ -8,11 +8,6 @@ const stats = fs.existsSync('./config.json');
 const q = require('q');
 const dfd = q.defer();
 const properties = [{
-  name: 'taxrate',
-  description: 'Taxrate (in decimal)',
-  validator: /[\d\.]+/,
-  required: true
-}, {
   name: 'company',
   description: 'Company name',
   required: true
@@ -26,7 +21,7 @@ const properties = [{
   required: true
 }, {
   name: 'street',
-  description: 'Street and number',
+  description: 'Street and number (ul. Andruszkiewicza)',
   required: true
 }, {
   name: 'zipcode',
@@ -41,11 +36,7 @@ const properties = [{
   description: 'NIP',
   required: true
 }, {
-  name: 'pesel',
-  description: 'PESEL',
-  required: true
-}, {
-  name: 'region',
+  name: 'regon',
   description: 'Regon',
   required: true
 }];
@@ -58,7 +49,6 @@ function startPrompt() {
       console.log(err);
     } else {
       let obj = {
-        podatek: result.taxrate,
         wystawca: {
           firma: result.company,
           imie: result.firstName,

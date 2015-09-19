@@ -1,14 +1,13 @@
 {
   "podatek": 0.18,
   "wystawca": {
-    "firma": "ANDŻEJ",
-    "imie": "ANDŻEJ",
-    "nazwisko": "ANDŻEJ",
-    "ulica": "ANDŻEJ 4/75",
+    "firma": "Company Name",
+    "imie": "Chris",
+    "nazwisko": "Lojniewski",
+    "ulica": "ul. Andruszkiewicza 4/75",
     "kodPocztowy": "00-001",
-    "miejscowosc": "ANDŻEJ",
+    "miejscowosc": "NYC",
     "nip": "0000000001",
-    "pesel": "PESEL",
     "regon": "000000000"
   }
 }
