@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+    <%= css %>
+  </style>
+  </head>
+  <body>
+    <h2>Rachunek z dnia</h2>      <span class="data-rachunku"><%= dataRachunku %></span>
+
+      za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmowy %></span>
+
+    <ul class="first-list">
+      <li><span>Wystawił/a:</span></li>
+      <%= imie %> <%= nazwisko %></li>
+      <li><span>Adres:</span>
+      <%= ulicaINumer %>, <%= kodPocztowy %> <%= miejscowosc %></li>
+      <% if (obj.nip) { %><li><span>NIP:</span><%= nip %></li> <% } %>
+      <% if (obj.pesel) { %><li><span>PESEL:</span><%= pesel %></li><% } %>
+    </ul>
+
+    <ul class="first-list">
+      <li><span>Dla:</span></li>
+      <span>Adres:</span>
+      <%= wystawca.firma %> <%= wystawca.imie %> <%= wystawca.nazwisko %></li>
+      <li><%= wystawca.ulica %>, <%= wystawca.kodPocztowy %> <%= wystawca.miejscowosc %></li>
+      <li><span>NIP:</span><%= wystawca.nip %></li>
+    </ul>
+
+
+    <ul class="second-list">
+      <li><span>kwota brutto:</span>
+        <%= kwotaBrutto %> zł
+      </li>
+      <li><span>koszty uzyskania przychodu (50%):</span>
+        <%= kosztyUzyskania(kwotaBrutto).toString().replace('.', ',') %> zł
+      </li>
+      <li><span>dochód:</span>
+        <%= dochod(kwotaBrutto).toString().replace('.', ',') %> zł
+      </li>
+      <li><span>należny podatek:</span>
+        <%= naleznyPodatek(kwotaBrutto).toString().replace('.', ',') %> zł
+      </li>
+      <li><span><strong>do wypłaty:</strong></span>
+        <strong><%= doWyplaty(kwotaBrutto).toString().replace('.', ',') %> zł</strong>
+      </li>
+    </ul>
+
+    <div class="amount-in-words"><strong>słownie:</strong><span><%= kwotaNettoSlownie %></span></div>
+
+    Wymienioną kwotę proszę przekazać na konto bankowe:
+    Numer konta: <%= numerKonta %>
+
+    Oświadczam, iż nie jestem zarejestrowany/a w urzędzie pracy jako osoba bezrobotna
+
+    <div class="signature">
+      <span>data</span>
+      <span>podpis</span>
+    </div>
+
+
+    <h3>Dane  Twórcy:</h3>
+
+    <ul class="third-list">
+      <li>
+        <span>Imię i Nazwisko:</span>
+        <%= imie %> <%= nazwisko %>
+      </li>
+      <li>
+        <span>Adres zamieszkania</span>
+        <%= ulicaINumer %>, <%= kodPocztowy %> <%= miejscowosc %>
+      </li>
+      <li>
+        <span>Pesel</span>
+        <%= pesel %>
+      </li>
+      <li>
+        <span>Data urodzenia</span>
+        <%= dataUrodzenia %>
+      </li>
+    </ul>
+  </body>
+</html>

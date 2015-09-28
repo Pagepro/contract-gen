@@ -3,11 +3,12 @@
     "ecma5"
   ],
   "loadEagerly": [
-    "lib/*"
+    "app/*"
   ],
   "plugins": {
     "node": {
-    
-    }
+
+    },
+    "es_modules": {}
   }
 }

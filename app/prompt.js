@@ -3,10 +3,12 @@
 const prompt = require('prompt');
 const fs = require('fs');
 const path = require('path');
-const stats = fs.existsSync('./config.json');
+const configExists = fs.existsSync('./config.json');
 
-const q = require('q');
-const dfd = q.defer();
+const Promise = require('bluebird');
+
+const getPromptPromised = Promise.promisify(prompt.get, prompt);
+
 const properties = [{
   name: 'company',
   description: 'Company name',
@@ -42,13 +44,15 @@ const properties = [{
 }];
 
 function startPrompt() {
-  console.log("Starting genrator. Please enter required data.")
-  prompt.get(properties, function(err, result) {
-    if (err) {
-      console.log("There was an error. Please try again.")
+  let obj;
+  console.log('Starting genrator. Please enter required data.');
+  return getPromptPromised(properties)
+    .catch(function(err) {
+      console.log('There was an error. Please try again.');
       console.log(err);
-    } else {
-      let obj = {
+    })
+    .then(function(result) {
+      obj = {
         wystawca: {
           firma: result.company,
           imie: result.firstName,
@@ -62,38 +66,39 @@ function startPrompt() {
         }
       };
       console.log(result);
-      console.log("Are above data valid? [Y/n]");
-      prompt.get({
+      console.log('Are above data valid? [Y/n]');
+    })
+    .then(function() {
+      return getPromptPromised({
         name: 'isValid',
         description: '[Y/n]',
         validator: /[yn]{1}/i
-      }, function(validationErr, validationResult) {
-        if (validationResult.isValid.toLowerCase() === 'n') {
-          startPrompt();
-        } else {
-          console.log('Writing config to config.json.');
-          try {
-            fs.writeFileSync(path.join(__dirname, '..', '/config.json'), JSON.stringify(obj, null, 4));
-            dfd.resolve();
-            console.log('File config.json successfully created at root directory.');
-          } catch (e) {
-            dfd.reject();
-            console.log('Couldn\'t write config.json.');
-          }
-        }
       });
-    }
-  });
+    })
+    .then(function(validationResult) {
+      if (validationResult.isValid.toLowerCase() === 'n') {
+        startPrompt();
+      } else {
+        console.log('Writing config to config.json.');
+        try {
+          fs.writeFileSync(path.join(__dirname, '..', '/config.json'), JSON.stringify(obj, null, 4));
+          console.log('File config.json successfully created at root directory.');
+        } catch (e) {
+          console.log('Couldn\'t write config.json.');
+        }
+      }
+    });
 }
 
+let promise;
 
-if (!stats) {
+if (!configExists) {
   prompt.start();
-  console.log("File config.json wasn't found in the directory.")
-  startPrompt();
+  console.log('File config.json wasn\'t found in the directory.');
+  promise = startPrompt();
 } else {
-  dfd.resolve();
+  promise = Promise.resolve();
 }
 
 
-module.exports = dfd.promise;
+module.exports = promise;

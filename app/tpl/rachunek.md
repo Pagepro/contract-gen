@@ -1,9 +1,9 @@
 **Rachunek z dnia**      <span class="data-rachunku"><%= dataRachunku %></span>
 
-za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmowy %><span>
+  za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmowy %></span>
 
 <ul class="first-list">
-  <li><span>Wystawił/a:</span></dt>
+  <li><span>Wystawił/a:</span></li>
   <%= imie %> <%= nazwisko %></li>
   <li><span>Adres:</span>
   <%= ulicaINumer %>, <%= kodPocztowy %> <%= miejscowosc %></li>
@@ -12,7 +12,7 @@ za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmow
 </ul>
 
 <ul class="first-list">
-  <li><span>Dla:</span></dt>
+  <li><span>Dla:</span></li>
   <span>Adres:</span>
   <%= wystawca.firma %> <%= wystawca.imie %> <%= wystawca.nazwisko %></li>
   <li><%= wystawca.ulica %>, <%= wystawca.kodPocztowy %> <%= wystawca.miejscowosc %></li>
@@ -25,16 +25,16 @@ za wykonanie pracy zgodnie z umową z dnia <span class="data-umowy"><%= dataUmow
 		<%= kwotaBrutto %> zł
 	</li>
 	<li><span>koszty uzyskania przychodu (50%):</span>
-		<%= kosztyUzyskania(kwotaBrutto).toString().replace('.', ',') %> zł
+		<%= formatToTemplate(kosztyUzyskania()) %> zł
 	</li>
 	<li><span>dochód:</span>
-		<%= dochod(kwotaBrutto).toString().replace('.', ',') %> zł
+		<%= formatToTemplate(dochod()) %> zł
 	</li>
 	<li><span>należny podatek:</span>
-		<%= naleznyPodatek(kwotaBrutto).toString().replace('.', ',') %> zł
+		<%= formatToTemplate(naleznyPodatek()) %> zł
 	</li>
 	<li><span><strong>do wypłaty:</strong></span>
-		<strong><%= doWyplaty(kwotaBrutto).toString().replace('.', ',') %> zł</strong>
+		<strong><%= formatToTemplate(doWyplaty()) %> zł</strong>
 	</li>
 </ul>         
           

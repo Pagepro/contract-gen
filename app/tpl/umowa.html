@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/pdf.css">
+  </head>
+  <body>
+      <span class="logo-pagepro"></span>
+      <span class="place-and-data">
+        Białystok, <%= dataUmowy %>
+      </span>
+      <h1>Umowa o dzieło</h1>
+      <h2>Zamawiający:</h2>
+      nazwa:  <%= wystawca.firma %> <%= wystawca.imie %> <%= wystawca.nazwisko %>
+      adres: <%= wystawca.kodPocztowy %> <%= wystawca.miejscowosc %>, <%= wystawca.ulica %>
+      NIP: <%= wystawca.nip %>
+      REGON: <%= wystawca.regon %>
+      <h2>Twórca:</h2>
+      imię: <%= imie %>
+      nazwisko: <%= nazwisko %>
+      adres: <%= kodPocztowy%> <%= miejscowosc %>, <%= ulicaINumer %>
+      NIP: <%= nip %>
+      PESEL: <%= pesel %>
+      data urodzenia: <%= dataUrodzenia %>
+      <h2>Zawierają umowę o następującej treści: </h2>
+      <ol>
+        <li>
+          <strong>Zamawiający</strong> zleca <strong>Twórcy</strong>strong> wykonanie następującego dzieła:
+          <div style="margin-left:35px;font-style:italic;"><%= przedmiot %> </div>
+        </li>
+        <li>
+          Z tytułu wykonania zleconej pracy, <strong>Twórca</strong>strong> otrzyma wynagrodzenie w wysokości: <%= kwotaBrutto %> zł (słownie: <%= kwotaBruttoSlownie %> PLN) brutto.
+        </li>
+        <li>
+          Wypłata wynagrodzenia nastąpi po wystawieniu rachunku przez <strong>Twórcę</strong>strong> i stwierdzeniu przez <strong>Zamawiającego</strong>strong> terminowego i prawidłowego wykonania zleconej pracy, będącej przedmiotem niniejszej umowy.
+        </li>
+        <li>
+          W sprawach nieunormowanych tą umową mają zastosowanie przepisy kodeksu cywilnego.
+        </li>
+        <li>
+          Postanowienia dodatkowe:
+          <ol>
+            <li><strong>Twórca</strong> nie wnosi o objęcie ubezpieczeniem społecznym i zdrowotnym. </li>
+            <li><strong>Twórca</strong> oświadcza, że wynagrodzenie uzyskane z przedmiotowej umowy zaspokaja jego wszelkie roszczenia do korzystania z utworu przez Zamawiającego na każdym polu eksploatacji.</li>
+            <li><strong>Twórca</strong>, przenosi (zgodnie z art. 41 ust. 1 pkt. 1 Ustawy o prawie autorskim i prawach pokrewnych z dnia 4 lutego 1994 roku Dz. U. z 2000 r. Nr 80, poz. 904) w ramach niniejszej umowy wszelkie autorskie prawa majątkowe do programów komputerowych, grafiki i wszelkiego rodzaju dokumentacji związanej z tworzonym oprogramowaniem oraz wyłączne prawo do udzielania zezwolenia na wykonywanie zależnego prawa autorskiego na rzecz <strong>Zamawiający</strong> tj. </li>
+          </ol>
+        </li>
+        <li>Umowa została sporządzona w dwóch jednobrzmiących egzemplarzach, po jednym dla każdej ze stron. </li>
+      </ol>
+      <div class="footer-contract">
+        <div style="float:left;">............................................................<span>Zamawiający</span></div>
+        <div style="float:right;">...........................................................<span>Twórca</span> </div>
+      </div>
+  </body>
+</html>
