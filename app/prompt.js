@@ -21,7 +21,7 @@ const properties = [{
   required: true
 }, {
   name: 'street',
-  description: 'Street and number (ul. Andruszkiewicza)',
+  description: 'Street and number',
   required: true
 }, {
   name: 'zipcode',
@@ -42,7 +42,7 @@ const properties = [{
 }];
 
 function startPrompt() {
-  console.log("Starting genrator. Please enter required data.")
+  console.log("Starting generator. Please enter required data.")
   prompt.get(properties, function(err, result) {
     if (err) {
       console.log("There was an error. Please try again.")
